@@ -1,0 +1,14 @@
+<div class="search-wrapper" *ngIf="charactersArray.length > 0">
+  <div class="search-input">
+    <input type="text" id="search-text" placeholder="Search" [(ngModel)] = characterName>
+  </div>
+  <div class="characters-title" *ngIf="(charactersArray | charactersFilter: characterName).length > 0"><h3>Characters List</h3></div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let character of charactersArray | charactersFilter: characterName">
+      <span (click)="characterDetails(character.id)">{{character.name}}</span>
+    </li>
+  </ul>
+  <div *ngIf="(charactersArray | charactersFilter: characterName).length === 0">
+    No matching characters found
+  </div>
+</div>

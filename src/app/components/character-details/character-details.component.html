@@ -1,0 +1,27 @@
+<div class="character-page">
+  <div class="back-button">
+    <button (click)="goBack()">Back</button>
+  </div>
+  <div class="details-wrapper" *ngIf="character">
+    <div><h2>{{character.name}}</h2></div>
+    <div>height: {{character.height}}</div>
+    <div>mass: {{character.mass}}</div>
+    <div>hair color: {{character.hair_color}}</div>
+    <div>skin color: {{character.skin_color}}</div>
+    <div>eye color: {{character.eye_color}}</div>
+    <div>birth year: {{character.birth_year}}</div>
+    <div>gender: {{character.gender}}</div>
+    <div *ngIf="homeworld">homeworld: {{homeworld}}</div>
+    <ng-container *ngIf="films.length > 0">
+      <div class="films-title">films:</div>
+      <ul class="films-details">
+        <li *ngFor="let film of films">
+          <span>{{film.title}}</span>
+          <span><b>director: </b>{{film.director}}</span>
+          <span><b>producer: </b>{{film.producer}}</span>
+          <p>{{film.opening_crawl}}</p>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</div>

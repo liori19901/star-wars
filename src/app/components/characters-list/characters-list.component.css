@@ -1,0 +1,27 @@
+.search-wrapper{
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.search-wrapper #search-text{
+  color:black;
+}
+.characters-title h3{
+  text-decoration: underline;
+}
+.list-group{
+  list-style: none;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+.list-group li{
+  margin-bottom: 10px;
+}
+
+.list-group li span{
+  cursor: pointer;
+}
+.list-group li.list-group-item span:hover {
+    text-decoration: underline;
+}

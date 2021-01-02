@@ -1,0 +1,21 @@
+header{
+  background: #ccc;
+  height: 100px;
+  padding: 10px;
+  background-position: center;
+  background-image: url(../assets/images/stars-bg.jpg);
+  background-size: cover;
+  position: relative;
+}
+header img {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    height: 80%;
+}
+.wrapper{
+  padding:10px;
+}
